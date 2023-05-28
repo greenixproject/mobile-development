@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">GREENIX</string>
+
+    <!--WELCOME SCREEN-->
+    <string name="logo_greenix">Icon Logo Greenix</string>
+    <string name="welcome_title">Welcome to Greenix</string>
+    <string name="welcome_sub_title">Please login to your account or create new account to continue</string>
+    <string name="or_line">or_line</string>
+    <string name="create_account">Create an Account</string>
+
+    <!--  Title  -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+
+    <!--  Custom EditText Error  -->
+    <string name="email_error">Invalid email entered!</string>
+    <string name="password_error">Password must be at least 8 characters!</string>
+
+    <!--  Login / Register  -->
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="input_email">Enter your email</string>
+    <string name="input_name">Enter your name</string>
+    <string name="input_password">Enter your password</string>
+    <string name="input_confirm">Enter your password again</string>
+
+    <string name="have_account">Already have an account?</string>
+    <string name="no_have_account">Don’t have an account?</string>
+
+    <!--  ???  -->
 </resources>
