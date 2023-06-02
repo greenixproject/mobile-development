@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347238506319",
+    "project_id": "bangkit-2023-capstone-greenix",
+    "storage_bucket": "bangkit-2023-capstone-greenix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347238506319:android:e0e88c43e0d1721a342f3a",
+        "android_client_info": {
+          "package_name": "com.bangkit2023.capstone.greenix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347238506319-6k6fjoqc5buod3jmeonsmn58i3j3m2kn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU6REdm3xIaQ_9YkBAAbdnUx8kB_q1upo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347238506319-6k6fjoqc5buod3jmeonsmn58i3j3m2kn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

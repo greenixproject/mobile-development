@@ -35,6 +35,8 @@
 
     <TextView
         android:id="@+id/sub_title"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -50,12 +52,14 @@
 
     <Button
         android:id="@+id/welcome_btn_login"
+        android:alpha="0"
+        tools:alpha="1"
         app:backgroundTint="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/dark_blue"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="14sp"
@@ -63,26 +67,27 @@
         app:strokeColor="@color/dark_blue"
         app:cornerRadius="10dp"
         app:strokeWidth="2dp"
-        app:layout_constraintBottom_toTopOf="@id/tv_account"
+        app:layout_constraintBottom_toTopOf="@id/img_or"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_account"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/img_or"
+        android:alpha="0"
+        tools:alpha="1"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/half_dark_blue"
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="14sp"
-        android:text="@string/no_have_account"
+        android:contentDescription="@string/image_or"
+        android:src="@drawable/or"
+        app:layout_constraintBottom_toTopOf="@id/welcome_btn_register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/create_account" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
-        android:id="@+id/create_account"
+        android:id="@+id/welcome_btn_register"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
