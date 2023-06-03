@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.bangkit2023.capstone.greenix.databinding.FragmentWelcomeBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class WelcomeFragment : Fragment() {
     private var _fragmentWelcomeBinding: FragmentWelcomeBinding? = null
@@ -20,6 +21,7 @@ class WelcomeFragment : Fragment() {
 
         onClick()
         setAnimation()
+        currentUser()
 
         return fragmentWelcomeBinding.root
     }
@@ -32,6 +34,15 @@ class WelcomeFragment : Fragment() {
         }
         fragmentWelcomeBinding.welcomeBtnRegister.setOnClickListener {
             val action = WelcomeFragmentDirections.actionWelcomeFragmentToRegisterFragment()
+            findNavController().navigate(action)
+        }
+    }
+
+    private fun currentUser() {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            // User is signed in
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
             findNavController().navigate(action)
         }
     }

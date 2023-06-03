@@ -5,15 +5,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bangkit2023.capstone.greenix.R
+import androidx.navigation.fragment.findNavController
+import com.bangkit2023.capstone.greenix.databinding.FragmentHomeBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    private var _fragmentHomeBinding: FragmentHomeBinding? = null
+    private val fragmentHomeBinding get() = _fragmentHomeBinding!!
+
+    private lateinit var auth: FirebaseAuth
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        _fragmentHomeBinding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        onClick()
+
+        return fragmentHomeBinding.root
+    }
+
+    private fun onClick() {
+        fragmentHomeBinding.btnLogout.setOnClickListener {
+            val user = FirebaseAuth.getInstance().signOut()
+            if (user != null) {
+                // User is signed in
+                val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
+                findNavController().navigate(action)
+            }
+        }
     }
 }
