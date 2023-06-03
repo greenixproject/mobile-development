@@ -3,7 +3,7 @@
 
     <!--WELCOME SCREEN-->
     <string name="logo_greenix">Icon Logo Greenix</string>
-    <string name="welcome_title">Welcome to Greenix</string>
+    <string name="welcome_title">Welcome to <font color='#79C151'>Greenix</font></string>
     <string name="welcome_sub_title">Please login to your account or create new account to continue</string>
     <string name="or_line">or_line</string>
     <string name="create_account">Create an Account</string>

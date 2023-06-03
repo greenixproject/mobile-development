@@ -25,7 +25,7 @@
         tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_bold"
         android:textSize="24sp"
         android:text="@string/welcome_title"
@@ -42,7 +42,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:gravity="center_horizontal|center"
-        android:textColor="@color/half_dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="16sp"
         android:text="@string/welcome_sub_title"
@@ -60,11 +60,11 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="14sp"
         android:text="@string/login"
-        app:strokeColor="@color/dark_blue"
+        app:strokeColor="@color/dark_gray"
         app:cornerRadius="10dp"
         app:strokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@id/img_or"
@@ -82,7 +82,8 @@
         android:src="@drawable/or"
         app:layout_constraintBottom_toTopOf="@id/welcome_btn_register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/light_green" />
 
     <Button
         android:id="@+id/welcome_btn_register"
