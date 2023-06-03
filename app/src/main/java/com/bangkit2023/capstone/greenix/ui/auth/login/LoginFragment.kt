@@ -47,8 +47,8 @@ class LoginFragment : Fragment() {
     private fun setupLogin() {
         auth = Firebase.auth
 
-        val email = fragmentLoginBinding.etEmail.toString()
-        val password = fragmentLoginBinding.etPassword.toString()
+        val email = fragmentLoginBinding.etEmail.text.toString()
+        val password = fragmentLoginBinding.etPassword.text.toString()
 
         if (email.isNotEmpty() && password.isNotEmpty()) {
             auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {

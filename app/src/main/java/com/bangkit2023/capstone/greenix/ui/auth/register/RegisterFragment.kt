@@ -42,13 +42,13 @@ class RegisterFragment : Fragment() {
     private fun setupRegister() {
         auth = Firebase.auth
 
-        val name = fragmentRegisterBinding.etName.toString()
-        val email = fragmentRegisterBinding.etEmail.toString()
-        val password = fragmentRegisterBinding.etPassword.toString()
-        val confirmPassword = fragmentRegisterBinding.etConfirm.toString()
+        val name = fragmentRegisterBinding.etName.text.toString()
+        val email = fragmentRegisterBinding.etEmail.text.toString()
+        val password = fragmentRegisterBinding.etPassword.text.toString()
+        val confirmPassword = fragmentRegisterBinding.etConfirm.text.toString()
 
         if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
-//            if (password == confirmPassword) {
+            if (password == confirmPassword) {
                 auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{
                     if (it.isSuccessful) {
                         val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
@@ -57,9 +57,9 @@ class RegisterFragment : Fragment() {
                         Toast.makeText(requireActivity(), it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
-//            } else {
-//                Toast.makeText(requireActivity(), "Password is not match!", Toast.LENGTH_SHORT).show()
-//            }
+            } else {
+                Toast.makeText(requireActivity(), "Password is not match!", Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(requireActivity(), "Empty Field is not allowed!", Toast.LENGTH_SHORT).show()
         }
