@@ -1,14 +1,14 @@
 package com.bangkit2023.capstone.greenix.ui.auth
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.bangkit2023.capstone.greenix.databinding.FragmentWelcomeBinding
+import com.bangkit2023.capstone.greenix.ui.utils.AnimationUtil
 import com.google.firebase.auth.FirebaseAuth
 
 class WelcomeFragment : Fragment() {
@@ -42,29 +42,20 @@ class WelcomeFragment : Fragment() {
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
             // User is signed in
-            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToNavigationFragment()
             findNavController().navigate(action)
+            Toast.makeText(requireActivity(), "Hi Welcome Back!", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun setAnimation() {
-        val logo = ObjectAnimator.ofFloat(fragmentWelcomeBinding.logo, View.ALPHA, 1f).setDuration(500)
-        val title = ObjectAnimator.ofFloat(fragmentWelcomeBinding.title, View.ALPHA, 1f).setDuration(500)
-        val subTitle = ObjectAnimator.ofFloat(fragmentWelcomeBinding.subTitle, View.ALPHA, 1f).setDuration(500)
-        val welcomeBtnLogin = ObjectAnimator.ofFloat(fragmentWelcomeBinding.welcomeBtnLogin, View.ALPHA, 1f).setDuration(500)
-        val imgOr = ObjectAnimator.ofFloat(fragmentWelcomeBinding.imgOr, View.ALPHA, 1f).setDuration(500)
-        val welcomeBtnRegister = ObjectAnimator.ofFloat(fragmentWelcomeBinding.welcomeBtnRegister, View.ALPHA, 1f).setDuration(500)
-
-        AnimatorSet().apply {
-            playSequentially(
-                logo,
-                title,
-                subTitle,
-                welcomeBtnLogin,
-                imgOr,
-                welcomeBtnRegister
-            )
-            start()
-        }
+        AnimationUtil.playAnimation(
+            fragmentWelcomeBinding.logo,
+            fragmentWelcomeBinding.title,
+            fragmentWelcomeBinding.subTitle,
+            fragmentWelcomeBinding.welcomeBtnLogin,
+            fragmentWelcomeBinding.imgOr,
+            fragmentWelcomeBinding.welcomeBtnRegister,
+        )
     }
 }

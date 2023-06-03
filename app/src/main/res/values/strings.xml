@@ -38,4 +38,26 @@
     <string name="menu_activity">Activity</string>
     <string name="menu_article">Article</string>
     <string name="menu_more">More</string>
+
+    <!--Home-->
+    <string name="hello_username">Hello %1$s</string>
+    <string name="floating_action_button">Floating Action Button</string>
+    <string name="title_carbon_footprint_summary">Carbon Footprint Summary</string>
+    <string name="carbon_summary">220 kg.CO2</string>
+    <!--Spinner Carbon Summary-->
+    <string-array name="carbon_summary_array">
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <!--Bottom Sheet Dialog-->
+    <string name="activities_type">Activities Type</string>
+    <string name="transportations">Transportations</string>
+    <string name="foods">Foods</string>
+    <!--Article-->
+    <!--Menu-->
+    <!--Profile-->
+    <!--???-->
+    <!--???-->
+    <!--???-->
 </resources>

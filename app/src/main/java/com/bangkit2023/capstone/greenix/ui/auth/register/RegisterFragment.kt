@@ -1,7 +1,5 @@
 package com.bangkit2023.capstone.greenix.ui.auth.register
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.bangkit2023.capstone.greenix.databinding.FragmentRegisterBinding
+import com.bangkit2023.capstone.greenix.ui.utils.AnimationUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -66,35 +65,19 @@ class RegisterFragment : Fragment() {
     }
 
     private fun setAnimation() {
-        val tvTitle = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvTitle, View.ALPHA, 1f).setDuration(500)
-        val tvName = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvName,View.ALPHA, 1f).setDuration(500)
-        val etName = ObjectAnimator.ofFloat(fragmentRegisterBinding.etName,View.ALPHA, 1f).setDuration(500)
-        val tvEmail = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvEmail, View.ALPHA, 1f).setDuration(500)
-        val etEmail = ObjectAnimator.ofFloat(fragmentRegisterBinding.etEmail, View.ALPHA, 1f).setDuration(500)
-        val tvPassword = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvPassword, View.ALPHA, 1f).setDuration(500)
-        val etPassword = ObjectAnimator.ofFloat(fragmentRegisterBinding.etPassword, View.ALPHA, 1f).setDuration(500)
-        val tvConfirm = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvConfirm, View.ALPHA, 1f).setDuration(500)
-        val etConfirm = ObjectAnimator.ofFloat(fragmentRegisterBinding.etConfirm, View.ALPHA, 1f).setDuration(500)
-        val btnRegister = ObjectAnimator.ofFloat(fragmentRegisterBinding.btnRegister,View.ALPHA, 1f).setDuration(500)
-        val btnLogin = ObjectAnimator.ofFloat(fragmentRegisterBinding.btnLogin, View.ALPHA, 1f).setDuration(500)
-        val bottomtext = ObjectAnimator.ofFloat(fragmentRegisterBinding.bottomtext, View.ALPHA, 1f).setDuration(500)
-
-        AnimatorSet().apply {
-            playSequentially(
-                tvTitle,
-                tvName,
-                etName,
-                tvEmail,
-                etEmail,
-                tvPassword,
-                etPassword,
-                tvConfirm,
-                etConfirm,
-                btnRegister,
-                btnLogin,
-                bottomtext
-            )
-            start()
-        }
+        AnimationUtil.playAnimation(
+            fragmentRegisterBinding.tvTitle,
+            fragmentRegisterBinding.tvName,
+            fragmentRegisterBinding.etName,
+            fragmentRegisterBinding.tvEmail,
+            fragmentRegisterBinding.etEmail,
+            fragmentRegisterBinding.tvPassword,
+            fragmentRegisterBinding.etPassword,
+            fragmentRegisterBinding.tvConfirm,
+            fragmentRegisterBinding.etConfirm,
+            fragmentRegisterBinding.btnRegister,
+            fragmentRegisterBinding.btnLogin,
+            fragmentRegisterBinding.bottomtext,
+        )
     }
 }
