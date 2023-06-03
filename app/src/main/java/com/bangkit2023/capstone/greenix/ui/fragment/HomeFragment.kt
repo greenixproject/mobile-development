@@ -14,7 +14,6 @@ class HomeFragment : Fragment() {
     private var _fragmentHomeBinding: FragmentHomeBinding? = null
     private val fragmentHomeBinding get() = _fragmentHomeBinding!!
 
-    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
@@ -27,12 +26,9 @@ class HomeFragment : Fragment() {
 
     private fun onClick() {
         fragmentHomeBinding.btnLogout.setOnClickListener {
-            val user = FirebaseAuth.getInstance().signOut()
-            if (user != null) {
-                // User is signed in
-                val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
-                findNavController().navigate(action)
-            }
+            FirebaseAuth.getInstance().signOut()
+            val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
+            findNavController().navigate(action)
         }
     }
 }
