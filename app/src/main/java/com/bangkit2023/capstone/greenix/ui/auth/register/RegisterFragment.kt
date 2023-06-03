@@ -48,7 +48,7 @@ class RegisterFragment : Fragment() {
         val confirmPassword = fragmentRegisterBinding.etConfirm.toString()
 
         if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
-            if (password == confirmPassword) {
+//            if (password == confirmPassword) {
                 auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{
                     if (it.isSuccessful) {
                         val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
@@ -57,9 +57,9 @@ class RegisterFragment : Fragment() {
                         Toast.makeText(requireActivity(), it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
-            } else {
-                Toast.makeText(requireActivity(), "Password is not match!", Toast.LENGTH_SHORT).show()
-            }
+//            } else {
+//                Toast.makeText(requireActivity(), "Password is not match!", Toast.LENGTH_SHORT).show()
+//            }
         } else {
             Toast.makeText(requireActivity(), "Empty Field is not allowed!", Toast.LENGTH_SHORT).show()
         }
@@ -68,12 +68,14 @@ class RegisterFragment : Fragment() {
     private fun setAnimation() {
         val tvTitle = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvTitle, View.ALPHA, 1f).setDuration(500)
         val tvName = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvName,View.ALPHA, 1f).setDuration(500)
+        val etName = ObjectAnimator.ofFloat(fragmentRegisterBinding.etName,View.ALPHA, 1f).setDuration(500)
         val tvEmail = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvEmail, View.ALPHA, 1f).setDuration(500)
         val etEmail = ObjectAnimator.ofFloat(fragmentRegisterBinding.etEmail, View.ALPHA, 1f).setDuration(500)
         val tvPassword = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvPassword, View.ALPHA, 1f).setDuration(500)
         val etPassword = ObjectAnimator.ofFloat(fragmentRegisterBinding.etPassword, View.ALPHA, 1f).setDuration(500)
         val tvConfirm = ObjectAnimator.ofFloat(fragmentRegisterBinding.tvConfirm, View.ALPHA, 1f).setDuration(500)
         val etConfirm = ObjectAnimator.ofFloat(fragmentRegisterBinding.etConfirm, View.ALPHA, 1f).setDuration(500)
+        val btnRegister = ObjectAnimator.ofFloat(fragmentRegisterBinding.btnRegister,View.ALPHA, 1f).setDuration(500)
         val btnLogin = ObjectAnimator.ofFloat(fragmentRegisterBinding.btnLogin, View.ALPHA, 1f).setDuration(500)
         val bottomtext = ObjectAnimator.ofFloat(fragmentRegisterBinding.bottomtext, View.ALPHA, 1f).setDuration(500)
 
@@ -81,12 +83,14 @@ class RegisterFragment : Fragment() {
             playSequentially(
                 tvTitle,
                 tvName,
+                etName,
                 tvEmail,
                 etEmail,
                 tvPassword,
                 etPassword,
                 tvConfirm,
                 etConfirm,
+                btnRegister,
                 btnLogin,
                 bottomtext
             )
