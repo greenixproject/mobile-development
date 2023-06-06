@@ -10,10 +10,10 @@
 
     <color name="red">#FF0000</color>
 
-    <color name="dark_blue">#0A4D68</color>
-    <color name="dark_cyan">#088395</color>
-    <color name="cyan">#05BFDB</color>
-    <color name="turquoise">#00FFCA</color>
-    <color name="half_dark_blue">#800A4D68</color>
-    <color name="light_gray">#D9D9D9</color>
+    <color name="green">#3ECD55</color>
+    <color name="light_green">#79C151</color>
+    <color name="light_gray">#ECECED</color>
+    <color name="dark_gray">#D6CFD7</color>
+    <color name="gray">#ADADAD</color>
+    <color name="clay">#DAD5ED</color>
 </resources>

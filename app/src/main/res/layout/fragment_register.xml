@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_bold"
         android:textSize="32sp"
         android:text="@string/register"
@@ -27,7 +27,7 @@
         tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
         android:text="@string/name"
@@ -58,7 +58,7 @@
         tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
         android:text="@string/email"
@@ -88,7 +88,7 @@
         tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
         android:text="@string/password"
@@ -118,7 +118,7 @@
         tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/black"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
         android:text="@string/confirm_password"
@@ -159,22 +159,27 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/bottomtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"
+        tools:alpha="1">
 
         <TextView
             android:id="@+id/tv_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:textColor="@color/dark_blue"
             android:fontFamily="@font/poppins"
-            android:textSize="14sp"
             android:text="@string/have_account"
+            android:textColor="@color/black"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_register"
             app:layout_constraintStart_toStartOf="parent"
@@ -184,14 +189,13 @@
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:textColor="@color/dark_blue"
             android:fontFamily="@font/poppins_bold"
-            android:textSize="14sp"
             android:text="@string/login"
+            android:textColor="@color/light_green"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tv_account"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_account" />
 
     </LinearLayout>
 
