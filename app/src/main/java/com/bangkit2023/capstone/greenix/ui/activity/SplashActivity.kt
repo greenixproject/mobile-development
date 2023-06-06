@@ -1,5 +1,6 @@
-package com.bangkit2023.capstone.greenix.ui
+package com.bangkit2023.capstone.greenix.ui.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import com.bangkit2023.capstone.greenix.databinding.ActivitySplashBinding
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     private var _splashBinding: ActivitySplashBinding? = null
     private val splashBinding get() = _splashBinding!!

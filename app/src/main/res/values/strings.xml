@@ -3,7 +3,7 @@
 
     <!--WELCOME SCREEN-->
     <string name="logo_greenix">Icon Logo Greenix</string>
-    <string name="welcome_title">Welcome to Greenix</string>
+    <string name="welcome_title">Welcome to <font color='#79C151'>Greenix</font></string>
     <string name="welcome_sub_title">Please login to your account or create new account to continue</string>
     <string name="or_line">or_line</string>
     <string name="create_account">Create an Account</string>
@@ -30,5 +30,34 @@
     <string name="have_account">Already have an account?</string>
     <string name="no_have_account">Don’t have an account?</string>
 
-    <!--  ???  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_or">Image Or</string>
+
+    <!--Navigation Menu-->
+    <string name="menu_home">Home</string>
+    <string name="menu_activity">Activity</string>
+    <string name="menu_article">Article</string>
+    <string name="menu_more">More</string>
+
+    <!--Home-->
+    <string name="hello_username">Hello %1$s</string>
+    <string name="floating_action_button">Floating Action Button</string>
+    <string name="title_carbon_footprint_summary">Carbon Footprint Summary</string>
+    <string name="carbon_summary">220 kg.CO2</string>
+    <!--Spinner Carbon Summary-->
+    <string-array name="carbon_summary_array">
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <!--Bottom Sheet Dialog-->
+    <string name="activities_type">Activities Type</string>
+    <string name="transportations">Transportations</string>
+    <string name="foods">Foods</string>
+    <!--Article-->
+    <!--Menu-->
+    <!--Profile-->
+    <!--???-->
+    <!--???-->
+    <!--???-->
 </resources>
