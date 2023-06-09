@@ -54,7 +54,16 @@
     <string name="activities_type">Activities Type</string>
     <string name="transportations">Transportations</string>
     <string name="foods">Foods</string>
-    <!--Article-->
+
+    <!--Activity-->
+    <string name="activity_page">Activity</string>
+    <string name="activities">Activities</string>
+    <string name="add_activity">Add</string>
+    <string name="image_activity_content_description">Image Activity</string>
+    <string name="tv_name_activity">Car</string>
+    <string name="tv_info_activity">100Km - 8607 KgCO2e</string>
+    <string name="tv_date">16 June 2023</string>
+
     <!--Menu-->
     <!--Profile-->
     <!--???-->
