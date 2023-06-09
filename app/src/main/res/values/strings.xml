@@ -64,7 +64,11 @@
     <string name="tv_info_activity">100Km - 8607 KgCO2e</string>
     <string name="tv_date">16 June 2023</string>
 
-    <!--Menu-->
+    <!--Article-->
+    <string name="article">Article</string>
+    <string name="image_article_content_description">Image Article</string>
+    <string name="article_title">6 Mahasiswa Membuat Aplikasi Penghitung Emisi Karbon Sebagai Tugas Capstone Mereka</string>
+
     <!--Profile-->
     <!--???-->
     <!--???-->
