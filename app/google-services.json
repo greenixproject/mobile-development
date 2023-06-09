@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "211593550040",
+    "project_id": "greenix-project-capstone",
+    "storage_bucket": "greenix-project-capstone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211593550040:android:f2b17550087743d9989fad",
+        "android_client_info": {
+          "package_name": "com.bangkit2023.capstone.greenix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211593550040-mrl9fip99j3gec95pl9hl7rb34hk653k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bangkit2023.capstone.greenix",
+            "certificate_hash": "09755300ed0bc1a5f74ee093f2afe5b62238c137"
+          }
+        },
+        {
+          "client_id": "211593550040-hpdqk02p3jg12610osk6f7o88vr7lnmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKzQgnfjfcbbs_8fq8LBe7n0jZQHrGGgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211593550040-2kg5ggtnjde0b3me46svqb17881prsqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

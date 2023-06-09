@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_article"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:foreground="@drawable/border_normal"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_article"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center|start"
+        android:src="@drawable/logo_greenix"
+        android:contentDescription="@string/image_article_content_description" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:layout_marginStart="115dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="4"
+        android:text="@string/article_title"
+        android:fontFamily="@font/poppins_bold" />
+
+</androidx.cardview.widget.CardView>

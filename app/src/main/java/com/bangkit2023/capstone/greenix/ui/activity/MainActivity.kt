@@ -1,4 +1,4 @@
-package com.bangkit2023.capstone.greenix.ui
+package com.bangkit2023.capstone.greenix.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -25,7 +25,6 @@
         tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/dark_blue"
         android:fontFamily="@font/poppins_bold"
         android:textSize="24sp"
         android:text="@string/welcome_title"
@@ -35,12 +34,13 @@
 
     <TextView
         android:id="@+id/sub_title"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:gravity="center_horizontal|center"
-        android:textColor="@color/half_dark_blue"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="16sp"
         android:text="@string/welcome_sub_title"
@@ -50,18 +50,20 @@
 
     <Button
         android:id="@+id/welcome_btn_login"
+        android:alpha="0"
+        tools:alpha="1"
         app:backgroundTint="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/green"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="14sp"
         android:text="@string/login"
-        app:strokeColor="@color/dark_blue"
-        app:cornerRadius="10dp"
+        app:strokeColor="@color/green"
+        app:cornerRadius="16dp"
         app:strokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@id/tv_account"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,20 +71,23 @@
 
     <TextView
         android:id="@+id/tv_account"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/half_dark_blue"
         android:fontFamily="@font/poppins_medium"
         android:textSize="14sp"
         android:text="@string/no_have_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/create_account" />
+        app:layout_constraintBottom_toTopOf="@id/welcome_btn_register" />
 
     <Button
-        android:id="@+id/create_account"
+        android:id="@+id/welcome_btn_register"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
@@ -90,7 +95,7 @@
         android:layout_marginBottom="50dp"
         android:text="@string/create_account"
         android:textAllCaps="false"
-        app:cornerRadius="10dp"
+        app:cornerRadius="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
