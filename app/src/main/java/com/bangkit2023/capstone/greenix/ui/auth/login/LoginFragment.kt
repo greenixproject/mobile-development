@@ -50,18 +50,8 @@ class LoginFragment : Fragment() {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    val user = auth.currentUser
-                    user!!.getIdToken(true).addOnCompleteListener { token ->
-                        if (token.isSuccessful) {
-                            val idToken: String? = token.result.token
-                        } else {
-                            Toast.makeText(requireActivity(), token.exception.toString(), Toast.LENGTH_SHORT).show()
-                        }
-                    }
-
                     val action = LoginFragmentDirections.actionLoginFragmentToNavigationFragment()
                     findNavController().navigate(action)
-
                     Toast.makeText(requireActivity(), "Login Success", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(requireActivity(), it.exception.toString(), Toast.LENGTH_SHORT).show()
