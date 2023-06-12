@@ -1,4 +1,4 @@
-package com.bangkit2023.capstone.greenix.ui.activity
+package com.bangkit2023.capstone.greenix.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent

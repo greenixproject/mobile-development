@@ -1,104 +1,19 @@
 <resources>
     <string name="app_name">GREENIX</string>
 
-    <!--WELCOME SCREEN-->
-    <string name="logo_greenix">Icon Logo Greenix</string>
-    <string name="welcome_title">Welcome to <font color='#79C151'>Greenix</font></string>
-    <string name="welcome_sub_title">Please login to your account or create new account to continue</string>
-    <string name="or_line">or_line</string>
-    <string name="create_account">Create an Account</string>
-
-    <!--  Title  -->
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-
-    <!--  Custom EditText Error  -->
-    <string name="email_error">Invalid email entered!</string>
-    <string name="password_error">Password must be at least 8 characters!</string>
-
-    <!--  Login / Register  -->
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-
-    <string name="input_email">Enter your email</string>
-    <string name="input_name">Enter your name</string>
-    <string name="input_password">Enter your password</string>
-    <string name="input_confirm">Enter your password again</string>
-
-    <string name="have_account">Already have an account?</string>
-    <string name="no_have_account">Don’t have an account?</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="image_or">Image Or</string>
-
-    <!--Navigation Menu-->
-    <string name="menu_home">Home</string>
-    <string name="menu_activity">Activity</string>
-    <string name="menu_article">Article</string>
-    <string name="menu_more">More</string>
-
-    <!-- Button -->
-    <string name="btn_logout">Logout</string>
-
     <!--Home-->
-    <string name="hello_username">Hello %1$s</string>
     <string name="floating_action_button">Floating Action Button</string>
     <string name="title_carbon_footprint_summary">Carbon Footprint Summary</string>
     <string name="carbon_summary">220 KgCO2</string>
     <string name="image_home_content_description">Image Home</string>
 
-    <!--Spinner Carbon Summary-->
-    <string-array name="carbon_summary_array">
-        <item>Weekly</item>
-        <item>Monthly</item>
-    </string-array>
 
-    <!--Bottom Sheet Dialog-->
     <string name="activities_type">Activities Type</string>
-
     <string name="transportations">Transportation</string>
-    <string name="wastes">Waste</string>
     <string name="foods">Food</string>
-    <string name="electricity">Electricity</string>
+    <string name="logo_greenix">Logo Greenix</string>
 
-    <!--Activity-->
-    <string name="activity_page">Activity</string>
-    <string name="activities">Activities</string>
-    <string name="add_activity">Add</string>
-    <string name="image_activity_content_description">Image Activity</string>
-    <string name="tv_name_activity">Car</string>
-    <string name="tv_info_activity">100Km - 8607 KgCO2e</string>
-    <string name="tv_date">16 June 2023</string>
+    <!--Bottom Sheet Transportation-->
 
-    <!--Article-->
-    <string name="article">Article</string>
-    <string name="image_article_content_description">Image Article</string>
-    <string name="article_title">6 Mahasiswa Membuat Aplikasi Penghitung Emisi Karbon Sebagai Tugas Capstone Mereka</string>
-
-    <!--Profile-->
-    <string name="my_profiles">My Profile</string>
-    <string name="username">Username</string>
-    <string name="emails">email@email.com</string>
-
-    <string name="edit_profile">Edit Profile</string>
-
-    <string name="personal">Personal Data</string>
-
-    <string name="age">Age</string>
-    <string name="gender">Gender</string>
-    <string name="location">Location</string>
-
-    <string name="radio_male">Male</string>
-    <string name="radio_female">Female</string>
-
-    <string name="input_age">Enter your age</string>
-    <string name="input_location">Enter your location</string>
-    <string name="submit">Submit</string>
-
-    <!--Menu-->
-    <!--???-->
-    <!--???-->
-    <!--???-->
+    <!--Bottom Sheet Food-->
 </resources>
