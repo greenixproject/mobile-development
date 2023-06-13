@@ -28,14 +28,18 @@
         android:text="@string/activities_type"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_line" />
+        app:layout_constraintTop_toBottomOf="@id/img_line" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_transportations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_foods"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_activities_type">
 
@@ -70,8 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/item_transportations"
         app:layout_constraintStart_toEndOf="@id/item_transportations"
-        app:layout_constraintTop_toBottomOf="@id/tv_activities_type">
+        app:layout_constraintTop_toTopOf="@id/item_transportations">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/btn_foods"
@@ -97,4 +102,5 @@
             app:layout_constraintTop_toBottomOf="@id/btn_foods" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

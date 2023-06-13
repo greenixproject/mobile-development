@@ -8,12 +8,88 @@
     tools:context=".activity.FoodsActivity">
 
     <TextView
+        android:id="@+id/tv_title"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="32sp"
+        android:text="@string/foods"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_people"
+        android:alpha="0"
+        tools:alpha="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="20sp"
+        android:text="@string/number_people"
+        app:layout_constraintBottom_toTopOf="@id/et_people"
+        app:layout_constraintStart_toStartOf="@id/et_people" />
+
+    <EditText
+        android:id="@+id/et_people"
+        android:alpha="0"
+        tools:alpha="1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_normal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:padding="8dp"
+        android:autofillHints=""
+        android:hint="@string/input_people"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:alpha="0"
+        tools:alpha="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="20sp"
+        android:text="@string/foods_amount"
+        app:layout_constraintBottom_toTopOf="@id/sp_amount"
+        app:layout_constraintStart_toStartOf="@id/sp_amount" />
+
+    <Spinner
+        android:id="@+id/sp_amount"
+        android:alpha="0"
+        tools:alpha="1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_people" />
+
+    <Button
+        android:id="@+id/btn_calculate_transportation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/calculate"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Foods"
-        android:textSize="30sp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:alpha="1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

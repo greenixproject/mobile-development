@@ -10,13 +10,13 @@ import com.bangkit2023.capstone.greenix.databinding.ActivitySplashBinding
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    private var _splashBinding: ActivitySplashBinding? = null
-    private val splashBinding get() = _splashBinding!!
+    private var _binding: ActivitySplashBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _splashBinding = ActivitySplashBinding.inflate(layoutInflater)
-        setContentView(splashBinding.root)
+        _binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)

@@ -8,17 +8,17 @@ import com.bangkit2023.capstone.greenix.databinding.ActivityMainBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
 
-    private lateinit var binding: ActivityMainBinding
     private var bottomSheetDialog: BottomSheetDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
