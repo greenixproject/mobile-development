@@ -29,15 +29,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun bottomSheetDialog() {
         val bottomSheetDialog = BottomSheetDialog(this)
-        val binding = ActivityBottomSheetTypeBinding.inflate(layoutInflater)
-        bottomSheetDialog.setContentView(binding.root)
+        val bottom = ActivityBottomSheetTypeBinding.inflate(layoutInflater)
+        bottomSheetDialog.setContentView(bottom.root)
 
-        binding.itemTransportations.setOnClickListener {
+        bottom.itemTransportations.setOnClickListener {
             val intent = Intent(this@MainActivity, TransportationsActivity::class.java)
             startActivity(intent)
         }
 
-        binding.itemFoods.setOnClickListener {
+        bottom.itemFoods.setOnClickListener {
             val intent = Intent(this@MainActivity, FoodsActivity::class.java)
             startActivity(intent)
         }

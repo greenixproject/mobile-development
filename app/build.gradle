@@ -16,6 +16,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField("String", "BASE_URL", '"https://ml-api-5vsvk6jkcq-et.a.run.app/"')
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -52,8 +54,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
 
     // Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
 
     // CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'

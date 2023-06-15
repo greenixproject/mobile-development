@@ -7,10 +7,23 @@
     <string name="carbon_summary">220 KgCO2</string>
     <string name="image_home_content_description">Image Home</string>
 
+    <!--  Bottom Sheet Activity  -->
     <string name="activities_type">Activities Type</string>
     <string name="transportations">Transportation</string>
     <string name="foods">Food</string>
     <string name="logo_greenix">Logo Greenix</string>
+
+    <!--  Bottom Sheet Transportation  -->
+    <string name="activities_transportation">Transportations Type</string>
+    <string name="motorcycle">Motor</string>
+    <string name="car">Mobil</string>
+    <string name="bus">Bus</string>
+
+    <!--  Bottom Sheet Food  -->
+    <string name="activities_food">Foods Type</string>
+    <string name="minyak">Minyak</string>
+    <string name="beras">Beras</string>
+    <string name="daging">Daging</string>
 
     <!--  Transportations  -->
     <string name="type_fuel">Type of Fuel</string>
@@ -21,7 +34,6 @@
     <string name="number_people">Number of People</string>
     <string name="input_people">how many people?</string>
     <string name="foods_amount">Consumption Amount</string>
-
 
     <!-- Bottom Sheet Transportation -->
 

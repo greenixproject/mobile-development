@@ -20,7 +20,7 @@ class ApiConfig {
 
         fun apiService(): ApiService {
             return Retrofit.Builder()
-                .baseUrl("") // Url Coming Soon
+                .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
