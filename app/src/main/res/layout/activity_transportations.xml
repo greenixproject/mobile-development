@@ -13,68 +13,61 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/poppins_bold"
-        android:textSize="32sp"
         android:text="@string/transportations"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_fuels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="20sp"
-        android:text="@string/type_fuel"
-        app:layout_constraintBottom_toTopOf="@id/sp_foods"
-        app:layout_constraintStart_toStartOf="@id/sp_foods" />
-
-    <Spinner
-        android:id="@+id/sp_foods"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <TextView
         android:id="@+id/tv_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:textSize="20sp"
         android:text="@string/distance"
-        app:layout_constraintBottom_toTopOf="@id/slider"
-        app:layout_constraintStart_toStartOf="@id/slider" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/slider"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/slider"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="40dp"
         android:valueFrom="0"
         android:valueTo="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sp_foods" />
+        app:layout_constraintTop_toBottomOf="@id/tv_distance" />
 
-    <TextView
-        android:id="@+id/tv_slider_counter"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="0 Km"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppins_semibold"
-        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/slider"/>
+        app:layout_constraintTop_toBottomOf="@id/slider"
+        app:cardBackgroundColor="@drawable/border_normal"
+        app:cardCornerRadius="10dp"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/et_slider_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="0 Km"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:inputType="number"/>
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btn_calculate_transportation"

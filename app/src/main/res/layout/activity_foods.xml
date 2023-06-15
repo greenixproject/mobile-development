@@ -48,25 +48,29 @@
         android:id="@+id/tv_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_medium"
         android:textSize="20sp"
         android:text="@string/foods_amount"
-        app:layout_constraintBottom_toTopOf="@id/sp_amount"
-        app:layout_constraintStart_toStartOf="@id/sp_amount" />
+        app:layout_constraintTop_toBottomOf="@+id/et_people"
+        app:layout_constraintStart_toStartOf="@id/et_people" />
 
-    <Spinner
-        android:id="@+id/sp_amount"
+    <EditText
+        android:id="@+id/et_amount"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/border_normal"
+        android:hint="@string/foods_amount"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_people" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
 
     <Button
-        android:id="@+id/btn_calculate_transportation"
+        android:id="@+id/btn_calculate_food"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"

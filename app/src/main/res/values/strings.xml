@@ -35,7 +35,12 @@
     <string name="input_people">how many people?</string>
     <string name="foods_amount">Consumption Amount</string>
 
-    <!-- Bottom Sheet Transportation -->
+    <!-- Spinner Food -->
+    <string-array name="food_spinner">
+        <item>1/4 Kg</item>
+        <item>1/4 Kg</item>
+        <item>1/4 Kg</item>
+    </string-array>
 
     <!-- Bottom Sheet Food -->
 </resources>

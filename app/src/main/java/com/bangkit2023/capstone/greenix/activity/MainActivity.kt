@@ -12,12 +12,13 @@ class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
 
-    private var bottomSheetDialog: BottomSheetDialog? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val result = intent.getStringExtra("result") ?: "0"
+        binding.tvCarbonSummary.text = "$result KgCO2"
 
         onClick()
     }
@@ -45,14 +46,5 @@ class MainActivity : AppCompatActivity() {
             bottomSheetDialog.dismiss()
         }
         bottomSheetDialog.show()
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        if (bottomSheetDialog != null && bottomSheetDialog!!.isShowing) {
-            bottomSheetDialog?.dismiss()
-        } else {
-            super.onBackPressed()
-        }
     }
 }
