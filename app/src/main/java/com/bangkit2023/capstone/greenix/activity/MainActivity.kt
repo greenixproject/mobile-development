@@ -7,6 +7,7 @@ import com.bangkit2023.capstone.greenix.databinding.ActivityBottomSheetTypeBindi
 import com.bangkit2023.capstone.greenix.databinding.ActivityMainBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
@@ -33,13 +34,15 @@ class MainActivity : AppCompatActivity() {
         bottomSheetDialog.setContentView(bottom.root)
 
         bottom.itemTransportations.setOnClickListener {
-            val intent = Intent(this@MainActivity, TransportationsActivity::class.java)
+            val intent = Intent(this@MainActivity, TransportationsTypeActivity::class.java)
             startActivity(intent)
+            bottomSheetDialog.dismiss()
         }
 
         bottom.itemFoods.setOnClickListener {
-            val intent = Intent(this@MainActivity, FoodsActivity::class.java)
+            val intent = Intent(this@MainActivity, FoodsTypeActivity::class.java)
             startActivity(intent)
+            bottomSheetDialog.dismiss()
         }
         bottomSheetDialog.show()
     }

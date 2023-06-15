@@ -4,7 +4,7 @@
     <!-- Home -->
     <string name="floating_action_button">Floating Action Button</string>
     <string name="title_carbon_footprint_summary">Carbon Footprint Summary</string>
-    <string name="carbon_summary">220 KgCO2</string>
+    <string name="carbon_summary">0 KgCO2</string>
     <string name="image_home_content_description">Image Home</string>
 
     <!--  Bottom Sheet Activity  -->
@@ -15,15 +15,15 @@
 
     <!--  Bottom Sheet Transportation  -->
     <string name="activities_transportation">Transportations Type</string>
-    <string name="motorcycle">Motor</string>
-    <string name="car">Mobil</string>
+    <string name="motorcycle">Motorcycle</string>
+    <string name="car">Car</string>
     <string name="bus">Bus</string>
 
     <!--  Bottom Sheet Food  -->
     <string name="activities_food">Foods Type</string>
-    <string name="minyak">Minyak</string>
-    <string name="beras">Beras</string>
-    <string name="daging">Daging</string>
+    <string name="oil">Oil</string>
+    <string name="rice">Rice</string>
+    <string name="meat">Meat</string>
 
     <!--  Transportations  -->
     <string name="type_fuel">Type of Fuel</string>

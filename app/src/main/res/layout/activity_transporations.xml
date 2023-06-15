@@ -2,15 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bottom_sheet_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TransportationsActivity">
 
     <TextView
         android:id="@+id/tv_title"
-        android:alpha="0"
-        tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -23,8 +20,6 @@
 
     <TextView
         android:id="@+id/tv_fuels"
-        android:alpha="0"
-        tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
@@ -35,8 +30,6 @@
 
     <Spinner
         android:id="@+id/sp_foods"
-        android:alpha="0"
-        tools:alpha="1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginEnd="30dp"
@@ -48,29 +41,40 @@
 
     <TextView
         android:id="@+id/tv_distance"
-        android:alpha="0"
-        tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:textSize="20sp"
         android:text="@string/distance"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"
-        app:layout_constraintStart_toStartOf="@id/seekBar" />
+        app:layout_constraintBottom_toTopOf="@id/slider"
+        app:layout_constraintStart_toStartOf="@id/slider" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:alpha="0"
-        tools:alpha="1"
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
-        android:max="1000"
+        android:valueFrom="0"
+        android:valueTo="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sp_foods" />
+
+    <TextView
+        android:id="@+id/tv_slider_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="0 Km"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider"/>
 
     <Button
         android:id="@+id/btn_calculate_transportation"
@@ -79,7 +83,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="40dp"
-        android:alpha="0"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/calculate"
         android:textSize="14sp"
