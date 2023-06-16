@@ -1,5 +1,13 @@
 # Mobile Application Greenix
 
+## About This Project
+This repository is for Greenix Mobile App. It is for our capstone project in Bangkit Academy 2023. It is also a graduation requirement in the Bangkit Academy 2023 program as an Mobile Development Learning Path
+
+## Project Contributor
+In this project there are 2 main contributors who are also students from the Mobile Development learning path.
+- https://github.com/MarcellGz
+- https://github.com/abdurrx
+
 ## TODO
 - [x] Design the application using figma
 - [x] Implementation the design to Application Layout (XML)
