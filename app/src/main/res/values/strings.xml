@@ -43,7 +43,7 @@
     <string name="btn_logout">Logout</string>
 
     <!--Home-->
-    <string name="hello_username">Hello %1$s</string>
+    <string name="hello_username">Welcome to Greenix!</string>
     <string name="floating_action_button">Floating Action Button</string>
     <string name="title_carbon_footprint_summary">Carbon Footprint Summary</string>
     <string name="carbon_summary">220 KgCO2</string>
@@ -97,8 +97,33 @@
     <string name="input_location">Enter your location</string>
     <string name="submit">Submit</string>
 
-    <!--Menu-->
-    <!--???-->
+    <!--Food Type Activity-->
+    <string name="food_type_title">Food Type</string>
+    <string name="food_type_info1">1.Choose your food</string>
+    <string name="food_type_info2">2.Fill the requirements</string>
+    <string name="food_type_info3">3.Check the result</string>
+    <string name="food_type_oil">Oil</string>
+    <string name="food_type_rice">Rice</string>
+    <string name="food_type_meat">Meat</string>
+
+    <!--Food Activity-->
+    <string name="number_people">Number of People</string>
+    <string name="input_people">Number of people</string>
+    <string name="foods_amount">Amount</string>
+    <string name="calculate">Calculate</string>
+
+    <!--Transportation Type Activity-->
+    <string name="transportation_type_title">Transportation Type</string>
+    <string name="transportation_type_info1">1.Choose your transportation</string>
+    <string name="transportation_type_info2">2.Fill the requirements</string>
+    <string name="transportation_type_info3">3.Check the result</string>
+    <string name="transportation_type_car">Car</string>
+    <string name="transportation_type_motor">Motorcycle</string>
+    <string name="transportation_type_bus">Bus</string>
+
+    <!--Transportation Activity-->
+    <string name="distance">Distance</string>
+
     <!--???-->
     <!--???-->
 </resources>

@@ -12,6 +12,42 @@
         android:theme="@style/Theme.Bangkit2023CapstoneGreenix"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.FoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.FoodTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.TransportationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.TransportationTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ActivityPage"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -22,7 +58,7 @@
         </activity>
         <activity
             android:name=".ui.activity.MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
