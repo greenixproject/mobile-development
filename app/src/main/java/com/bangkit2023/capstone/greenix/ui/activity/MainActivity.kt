@@ -3,7 +3,6 @@ package com.bangkit2023.capstone.greenix.ui.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.Profile
 import android.widget.Toast
 import com.bangkit2023.capstone.greenix.R
 import com.bangkit2023.capstone.greenix.databinding.ActivityBottomSheetTypeBinding

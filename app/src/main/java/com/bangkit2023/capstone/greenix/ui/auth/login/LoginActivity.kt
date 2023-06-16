@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import com.bangkit2023.capstone.greenix.databinding.ActivityLoginBinding
 import com.bangkit2023.capstone.greenix.ui.activity.MainActivity
 import com.bangkit2023.capstone.greenix.ui.auth.register.RegisterActivity
