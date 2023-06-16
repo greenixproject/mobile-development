@@ -52,12 +52,16 @@ class MainActivity : AppCompatActivity() {
         bottom.itemTransportations.setOnClickListener {
             val intent = Intent(this@MainActivity, TransportationTypeActivity::class.java)
             startActivity(intent)
+            finish()
+
             bottomSheetDialog.dismiss()
         }
 
         bottom.itemFoods.setOnClickListener {
             val intent = Intent(this@MainActivity, FoodTypeActivity::class.java)
             startActivity(intent)
+            finish()
+
             bottomSheetDialog.dismiss()
         }
 
