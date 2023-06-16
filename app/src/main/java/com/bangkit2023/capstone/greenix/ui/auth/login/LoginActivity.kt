@@ -16,11 +16,10 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
         setAnimation()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
@@ -28,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnRegister.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Login Button
@@ -47,6 +47,8 @@ class LoginActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
+                    finish()
+
                     Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this@LoginActivity, it.exception.toString(), Toast.LENGTH_SHORT).show()

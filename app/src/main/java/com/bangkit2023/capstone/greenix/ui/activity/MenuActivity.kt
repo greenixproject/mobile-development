@@ -13,10 +13,9 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
@@ -27,5 +26,4 @@ class MenuActivity : AppCompatActivity() {
             finish()
         }
     }
-
 }

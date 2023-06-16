@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:textColor="@color/black"
         android:fontFamily="@font/poppins_bold"
         android:textSize="32sp"
@@ -160,16 +160,15 @@
 
     <LinearLayout
         android:id="@+id/bottom_text"
+        android:alpha="0"
+        tools:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:alpha="0"
+        android:layout_marginBottom="40dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register"
-        tools:alpha="1">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tv_account"
@@ -179,11 +178,7 @@
             android:fontFamily="@font/poppins"
             android:text="@string/have_account"
             android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_register"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/btn_register" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/btn_login"
@@ -192,10 +187,7 @@
             android:fontFamily="@font/poppins_bold"
             android:text="@string/login"
             android:textColor="@color/light_green"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tv_account" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 

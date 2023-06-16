@@ -12,18 +12,15 @@ import com.bangkit2023.capstone.greenix.utils.AnimationUtil
 import com.google.firebase.auth.FirebaseAuth
 
 class WelcomeActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
         setAnimation()
-        currentUser()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
@@ -31,19 +28,10 @@ class WelcomeActivity : AppCompatActivity() {
             val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
             startActivity(intent)
         }
+
         binding.welcomeBtnRegister.setOnClickListener {
             val intent = Intent(this@WelcomeActivity, RegisterActivity::class.java)
             startActivity(intent)
-        }
-    }
-
-    private fun currentUser() {
-        val user = FirebaseAuth.getInstance().currentUser
-        if (user != null) {
-            // User is signed in
-            val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
-            startActivity(intent)
-            Toast.makeText(this@WelcomeActivity, "Hi Welcome Back!", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -13,10 +13,9 @@ class ActivityPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {

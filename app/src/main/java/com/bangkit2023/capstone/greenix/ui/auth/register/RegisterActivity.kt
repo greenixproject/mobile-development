@@ -19,20 +19,21 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
         setAnimation()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
         binding.btnRegister.setOnClickListener {
             setupRegister()
         }
+
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -50,6 +51,7 @@ class RegisterActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                         startActivity(intent)
+                        finish()
                     } else {
                         Toast.makeText(this@RegisterActivity, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }

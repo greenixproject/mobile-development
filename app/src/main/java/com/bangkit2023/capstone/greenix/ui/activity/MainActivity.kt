@@ -8,8 +8,10 @@ import android.widget.Toast
 import com.bangkit2023.capstone.greenix.R
 import com.bangkit2023.capstone.greenix.databinding.ActivityBottomSheetTypeBinding
 import com.bangkit2023.capstone.greenix.databinding.ActivityMainBinding
+import com.bangkit2023.capstone.greenix.ui.auth.WelcomeActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -18,14 +20,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        currentUser()
 
         val result = intent.getStringExtra("result") ?: "0"
         binding.tvCarbonSummary.text = "$result KgCO2"
 
         onClick()
         bottomNav()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             bottomSheetDialog.dismiss()
         }
+
         bottomSheetDialog.show()
     }
 
@@ -73,23 +77,39 @@ class MainActivity : AppCompatActivity() {
                 R.id.btn_activity -> {
                     val intent = Intent(this@MainActivity, ActivityPage::class.java)
                     startActivity(intent)
+                    finish()
+
                     Toast.makeText(this@MainActivity, "Activity", Toast.LENGTH_SHORT).show()
                     true
                 }
                 R.id.btn_article -> {
                     val intent = Intent(this@MainActivity, ArticleActivity::class.java)
                     startActivity(intent)
+                    finish()
+
                     Toast.makeText(this@MainActivity, "Article", Toast.LENGTH_SHORT).show()
                     true
                 }
                 R.id.btn_more -> {
                     val intent = Intent(this@MainActivity, MenuActivity::class.java)
                     startActivity(intent)
+                    finish()
+
                     Toast.makeText(this@MainActivity, "Menu", Toast.LENGTH_SHORT).show()
                     true
                 }
                 else -> false
             }
+        }
+    }
+
+    private fun currentUser() {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user == null) {
+            // User is signed in
+            val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

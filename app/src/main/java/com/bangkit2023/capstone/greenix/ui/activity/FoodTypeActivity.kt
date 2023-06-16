@@ -13,11 +13,10 @@ class FoodTypeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFoodTypeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         onClick()
         setAnimation()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {

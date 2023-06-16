@@ -14,12 +14,11 @@ class TransportationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTransportationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         getTransportationTitle()
         slideCounter()
         onClick()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {

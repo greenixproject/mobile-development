@@ -11,11 +11,10 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setAnimation()
         onClick()
-
-        setContentView(binding.root)
     }
 
     private fun onClick() {
