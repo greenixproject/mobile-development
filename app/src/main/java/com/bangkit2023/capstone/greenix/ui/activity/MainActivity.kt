@@ -33,8 +33,9 @@ class MainActivity : AppCompatActivity() {
     private fun onClick() {
         //Profile Avatar
         binding.imgAvatar.setOnClickListener {
-        val intent = Intent(this@MainActivity, ProfileActivity::class.java)
-        startActivity(intent)
+            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         //Floating Button

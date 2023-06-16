@@ -56,14 +56,15 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="250dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginStart="115dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="200dp"
             android:fontFamily="@font/poppins_bold"
             android:maxLines="4"
             android:text="@string/article_title" />
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
