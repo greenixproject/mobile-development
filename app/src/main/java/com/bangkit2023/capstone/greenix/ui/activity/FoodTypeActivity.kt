@@ -16,7 +16,6 @@ class FoodTypeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         onClick()
-        setAnimation()
     }
 
     private fun onClick() {
@@ -41,12 +40,19 @@ class FoodTypeActivity : AppCompatActivity() {
             intent.putExtra("title", selectedItem.name)
             intent.putExtra("carbon", selectedItem.carbon)
             startActivity(intent)
+
+            finish()
+
         } else {
             Toast.makeText(this@FoodTypeActivity, "Invalid Food Type", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun setAnimation() {
-
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+        finish()
     }
 }

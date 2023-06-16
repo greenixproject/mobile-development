@@ -40,12 +40,16 @@ class ActivityPage : AppCompatActivity() {
         bottom.itemTransportations.setOnClickListener {
             val intent = Intent(this@ActivityPage, TransportationTypeActivity::class.java)
             startActivity(intent)
+            finish()
+
             bottomSheetDialog.dismiss()
         }
 
         bottom.itemFoods.setOnClickListener {
             val intent = Intent(this@ActivityPage, FoodTypeActivity::class.java)
             startActivity(intent)
+            finish()
+
             bottomSheetDialog.dismiss()
         }
         bottomSheetDialog.show()

@@ -41,8 +41,17 @@ class TransportationTypeActivity : AppCompatActivity() {
             intent.putExtra("title", selectedItem.name)
             intent.putExtra("carbon", selectedItem.carbon)
             startActivity(intent)
+            finish()
         } else {
             Toast.makeText(this@TransportationTypeActivity, "Invalid Transportation Type", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+        finish()
     }
 }
