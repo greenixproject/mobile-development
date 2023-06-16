@@ -5,8 +5,8 @@ This repository is for Greenix Mobile App. It is for our capstone project in Ban
 
 ## Project Contributor
 In this project there are 2 main contributors who are also students from the Mobile Development learning path.
-- https://github.com/MarcellGz
-- https://github.com/abdurrx
+- [Andi Marcellino - A014DKX4427](https://github.com/MarcellGz)
+- [Abdur Rahman - A090DSX2438](https://github.com/abdurrx)
 
 ## TODO
 - [x] Design the application using figma
